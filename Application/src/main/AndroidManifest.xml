@@ -46,6 +46,7 @@
             android:theme="@android:style/Theme.Holo.Dialog" />
         <activity android:name=".ScanActivity" >
         </activity>
+
     </application>
 
 </manifest>
