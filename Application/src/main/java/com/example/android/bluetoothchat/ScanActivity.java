@@ -2,7 +2,10 @@ package com.example.android.bluetoothchat;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Point;
 import android.os.Bundle;
+import android.view.Display;
+
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -16,9 +19,11 @@ public class ScanActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scan);
-
-        integrator.addExtra("SCAN_WIDTH", 640);
-        integrator.addExtra("SCAN_HEIGHT", 480);
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        integrator.addExtra("SCAN_WIDTH", size.x*0.75);
+        integrator.addExtra("SCAN_HEIGHT", size.y*0.75);
         integrator.addExtra("SCAN_MODE", "QR_CODE_MODE");
         integrator.initiateScan(IntentIntegrator.QR_CODE_TYPES);
         integrator.addExtra("SAVE_HISTORY", false);
