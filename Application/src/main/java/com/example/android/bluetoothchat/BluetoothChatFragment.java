@@ -333,7 +333,7 @@ public class BluetoothChatFragment extends Fragment {
             case REQUEST_CONNECT_DEVICE_SECURE:
                 // When DeviceListActivity returns with a device to connect
                 if (resultCode == Activity.RESULT_OK) {
-                    connectDevice(data, true);
+                    connectDevice(data, false);
                 }
                 break;
             case REQUEST_CONNECT_DEVICE_INSECURE:
