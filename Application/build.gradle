@@ -32,6 +32,7 @@ dependencies {
 
     compile 'com.estimote:sdk:0.9.3@aar'
 
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
 }
 
 // The sample build uses multiple directories to
