@@ -29,7 +29,6 @@ public class ScanActivity extends Activity {
         integrator.addExtra("SAVE_HISTORY", false);
 
     }
-
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
         if (result != null) {
